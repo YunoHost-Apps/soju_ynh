@@ -15,19 +15,17 @@ ynh_systemctl --service="$app" --action="stop"
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env data"
-
-chown -R "$app:www-data" "$install_dir"
+ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="config.ini main.db"
 
 #=================================================
 # UPDATE A CONFIG FILE
 #=================================================
 ynh_script_progression "Updating $app's configuration files..."
 
-ynh_config_add --template="some_config_file" --destination="$install_dir/some_config_file"
+ynh_config_add --template="config.ini" --destination="$install_dir/config.ini"
 
-chmod 400 "$install_dir/some_config_file"
-chown "$app:$app" "$install_dir/some_config_file"
+chmod 400 "$install_dir/config.ini"
+chown "$app:$app" "$install_dir/config.ini"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
