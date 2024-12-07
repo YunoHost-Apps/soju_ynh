@@ -20,8 +20,8 @@ ynh_script_progression "Building $app..."
 ynh_go_install
 
 pushd $install_dir/
-	ynh_exec_warn_lessmake
-	ynh_exec_warn_lessmake install
+	ynh_exec_warn_less make
+	ynh_exec_warn_less make install
 popd
 
 #chmod +x "$install_dir"
