@@ -1,1 +1,1 @@
-Ceci est une fausse description des fonctionalités de l'app
+soju est un bouncer IRC convivial. soju se connecte aux serveurs IRC en amont au nom de l'utilisateur pour fournir des fonctionnalités supplémentaires. soju prend en charge de nombreuses fonctionnalités telles que les utilisateurs multiples, de nombreuses extensions IRCv3, la lecture de l'historique des discussions et les canaux séparés. Il est bien adapté aux petits et grands déploiements.
