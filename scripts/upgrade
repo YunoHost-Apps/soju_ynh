@@ -22,10 +22,10 @@ ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="config.ini mai
 #=================================================
 ynh_script_progression "Updating $app's configuration files..."
 
-ynh_config_add --template="config.ini" --destination="$install_dir/config.ini"
+#ynh_config_add --template="config.ini" --destination="$install_dir/config.ini"
 
-chmod 400 "$install_dir/config.ini"
-chown "$app:$app" "$install_dir/config.ini"
+#chmod 400 "$install_dir/config.ini"
+#chown "$app:$app" "$install_dir/config.ini"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
@@ -43,7 +43,7 @@ yunohost service add "$app" --description="A short description of the app" --log
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start"
+#ynh_systemctl --service="$app" --action="start"
 
 #=================================================
 # END OF SCRIPT
