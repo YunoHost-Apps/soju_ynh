@@ -19,7 +19,7 @@ ynh_go_install
 
 pushd $install_dir/
 	ynh_hide_warnings make
-	ynh_hide_warnings make install
+	ynh_hide_warnings make install GOFLAGS="-tags=libsqlite3"
 popd
 
 #chmod +x "$install_dir"
