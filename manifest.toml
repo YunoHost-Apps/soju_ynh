@@ -44,13 +44,6 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
-    [install.language]
-    ask.en = "Choose the application language"
-    ask.fr = "Choisissez la langue de l'application"
-    type = "select"
-    choices = ["fr", "en"]
-    default = "fr"
-
     [install.admin]
     type = "user"
 
@@ -79,4 +72,4 @@ ram.runtime = "50M"
     [resources.ports]
 
     [resources.apt]
-    packages = ""
+    packages = "sqlite3"
